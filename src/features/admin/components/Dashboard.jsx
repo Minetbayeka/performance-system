@@ -1,10 +1,17 @@
 import React from 'react'
+import { Button } from './DashboardButton'
 
 const Dashboard = () => {
   return (
-    <div>
-      
-    </div>
+    <section>
+      <div className='flex justify-evenly'>
+        
+        <Button 
+        
+        />
+
+      </div>
+    </section>
   )
 }
 
