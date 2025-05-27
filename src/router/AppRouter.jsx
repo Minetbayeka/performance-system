@@ -2,6 +2,8 @@
 import {createBrowserRouter} from "react-router-dom"
 import Layout from "../layout/Layout";
 import AdminDashboard from "../features/admin/AdminDashboard";
+import InternDashboard from "../features/interns/internDashboard";
+
 
 
 
@@ -17,7 +19,12 @@ import AdminDashboard from "../features/admin/AdminDashboard";
 
 const children = [
 
-      { element: <AdminDashboard />, path: "/" }
+      { element: <AdminDashboard />, path: "/" },
+      { element: <InternDashboard />, path: "/dashboard" },
+      
+      
+
+  
    
      
      
