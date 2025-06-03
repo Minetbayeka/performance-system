@@ -8,11 +8,15 @@ const AdminDashboard = () => {
   return (
     <div className='max-w-6xl mx-auto'>
       <div className='flex gap-5 pt-11'>
+        <div className=''>
       <Sidebar/>
-
-      <div>
+      </div>
+      <div className=''>
       <DashboardHeader/>
-      <Dashboard/>
+      <div>
+        <Dashboard/>
+      </div>
+      
       </div>
        </div>
     </div>

@@ -3,6 +3,7 @@ import Dashboard from './components/dashboard'
 import Sidebar from '../admin/components/Sidebar'
 import HeaderIntern from './components/HeaderIntern'
 
+
 const InternDashboard = () => {
   return (
     <section className='max-w-6xl mx-auto '>
@@ -12,6 +13,7 @@ const InternDashboard = () => {
      <div>
     <HeaderIntern/>
      <Dashboard/>
+  
      </div>
      
       </div>
@@ -19,5 +21,6 @@ const InternDashboard = () => {
     </section>
   )
 }
+
 
 export default InternDashboard

@@ -1,20 +1,46 @@
 
-import { RouterProvider } from "react-router-dom";
+// import { RouterProvider } from "react-router-dom";
+import { useReducer, useState } from "react";
 import { AppContext } from "./AppContext";
+import { RouterProvider} from "react-router-dom";
+import { router } from "../router/AppRouter";
+import { cartReducer } from "./CartReducer";
+import { interns as initialInterns } from "../../src/features/data";
+
+
+
+
 
 
 
 const ContextProvider = ({children}) => {
 
+  const [state, dispatch] = useReducer(cartReducer, []);
+  const [interns, setInterns] = useState(initialInterns);
+  
+
+ 
+   // Handler to remove an intern
+   const removeIntern = (id) => {
+     const updatedInterns = interns.filter((intern) => intern.id !== id);
+     setInterns(updatedInterns);
+   };
+
+   const addIntern = (newIntern) => {
+  setInterns((prevInterns) => [...prevInterns, newIntern]);
+};
+
 
 
   return (
     <AppContext.Provider
-    value={
-      {
-
-         
-      }}
+    value={{dispatch,state,interns, 
+       removeIntern, 
+      initialInterns, 
+      addIntern,
+    
+    
+  }}
     
     >
        {children} 
@@ -23,7 +49,7 @@ const ContextProvider = ({children}) => {
   );
 };
 
-export default ContextProvider;
+
 
 export const AppProvider = () => {
   return(
@@ -33,3 +59,13 @@ export const AppProvider = () => {
   
   );
 };
+
+
+
+
+
+
+
+
+
+

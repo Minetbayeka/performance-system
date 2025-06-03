@@ -45,7 +45,7 @@ const DepartmentCharts = () => {
 ]
   return (
     <div>
-  <BarChart width={730} height={250} data={data}>
+  <BarChart width={630} height={250} data={data}>
   {/* <CartesianGrid strokeDasharray="3 3" /> */}
   <XAxis dataKey="name" />
   <YAxis type="number" domain={[0, 100]} allowDataOverflow />
