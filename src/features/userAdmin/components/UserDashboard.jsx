@@ -59,7 +59,7 @@ const UserDashboard= () => {
             type="text"
             placeholder="Search"
             className="bg-gray-50 outline-none w-full text-[#E4E7EC] placeholder-[#E4E7EC] mx-5"
-               value={search}
+            value={search}
             onChange={(e) => setSearch(e.target.value)}  
           
           />

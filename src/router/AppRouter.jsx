@@ -10,6 +10,7 @@ import AddIntern from "../features/interns/AddIntern";
 import UserManagement from "../features/userAdmin/UserManagement";
 import CreateUsers from "../features/userAdmin/CreateUsers";
 import Rolepermission from "../features/userAdmin/components/Rolepermission";
+import ActivityHistory from "../features/userAdmin/components/ActivityHistory";
 
 
 
@@ -27,6 +28,7 @@ const children = [
       { element: <UserManagement />, path: "/usermanagement" },
       { element: <CreateUsers />, path: "/createuser" },
       { element: <Rolepermission />, path: "/role" },
+      { element: <ActivityHistory />, path: "/activityhistory" },
      
      
    
