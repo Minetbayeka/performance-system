@@ -11,7 +11,7 @@ const UserProfile = () => {
     <div className='max-w-6xl mx-auto'>
        <div className='flex'>
       <Sidebar/>
-      <div className='mt-8'>
+      <div className='mt-8 ml-48'>
         <button>&larr; Intern Profile</button>
           <div className='flex space-x-10 ml-64 pt-5'>
         <Link to="/addintern">

@@ -6,6 +6,7 @@ import DepartmentCharts from './DepartmentCharts';
 import TrendChart from './TrendChart';
 import WeeklyChart from './WeeklyChart';
 import { Link } from 'react-router-dom'
+import interns from '../../data';
 
 const Dashboard = () => {
   return (
@@ -39,7 +40,7 @@ const Dashboard = () => {
         {/* Total intern */}
         <div className='bg-white border rounded-lg p-4 shadow-sm'>
           <h1 className='font-semibold'>Total intern</h1>
-          <p className='font-bold text-2xl'>100</p>
+          <p className='font-bold text-2xl'>{interns.length}</p>
           <p className='text-gray-400 text-sm'>Count of all interns in the system</p>
         </div>
         {/* Pending Reviews */}
