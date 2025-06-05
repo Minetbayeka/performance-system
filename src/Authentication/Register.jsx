@@ -1,6 +1,6 @@
 import React from 'react'
 import RegistrationForm from './components/RegisterForm'
-import image2 from '../../src/assets/images/girl.jpeg'
+import image2 from '../../src/assets/images/person.jpg'
 
 const Register = () => {
   return (
