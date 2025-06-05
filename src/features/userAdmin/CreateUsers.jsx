@@ -44,11 +44,12 @@ const CreateUsers = () => {
  <div className="max-w-6xl mx-auto">
       <div className="flex pt-4">
         <Sidebar />
-        <div>
+        <div className='flex-1'>
           <Link to="/usermanagement">
-            <button className="mb-4 text-purple-600 hover:underline">&larr; Create Users</button>
+            <button className="mb-4 text-purple-600 hover:underline  ml-48">&larr; Create Users</button>
           </Link>
-          <div className="pl-80">
+          <div className="">
+            <div className="flex flex-col items-center">
             <div className="text-primary bg-[#E4E7EC] rounded-full p-4 w-20 h-20 ml-24 flex items-center justify-center overflow-hidden">
               {image ? (
                 <img src={image} alt="Preview" className="h-10 w-10 rounded-full object-cover" />
@@ -67,6 +68,7 @@ const CreateUsers = () => {
                   onChange={handleUpload}
                 />
               </label>
+            </div>
             </div>
 
             <form className="max-w-md mx-auto p-4 space-y-4">

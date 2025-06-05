@@ -10,7 +10,7 @@ const Sidebar = () => {
   return (
     <div className='fixed top-0 left-0 h-screen w-64 bg-white shadow-lg flex flex-col justify-between z-20'>
       <div className='p-6 overflow-y-auto'>
-        <img src={image} alt="logo" className='h-28 w-24' />
+        <img src={image} alt="logo" className='h-14 w-24' />
         <ul className='mt-10 space-y-4 font-semibold'>
           <li><Link to="/">Dashboard</Link></li>
           <li><Link to="/dashboard">Intern Management</Link></li>

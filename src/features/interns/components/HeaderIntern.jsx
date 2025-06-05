@@ -8,9 +8,9 @@ import { AppContext } from '../../../provider/AppContext';
 const HeaderIntern = () => {
   const {interns} = useContext(AppContext)
   return (
-<div className='fixed top-0 left-64 right-0 z-10 flex justify-between items-center px-6 py-4 bg-white shadow-md h-20'>
+<div className='sticky  flex justify-between items-center px-6 py-4 h-20'>
 
-  <div><h1 className='font-semibold text-xl'>Intern Management</h1></div>
+  <div><h1 className='font-semibold text-xl  ml-36'>Intern Management</h1></div>
   <div className='flex items-center gap-2'>
     <button>
      <Bell className='relative' />

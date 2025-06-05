@@ -12,6 +12,8 @@ import CreateUsers from "../features/userAdmin/CreateUsers";
 import Rolepermission from "../features/userAdmin/components/Rolepermission";
 import ActivityHistory from "../features/userAdmin/components/ActivityHistory";
 
+import Register from "../Authentication/Register";
+
 
 
 
@@ -22,6 +24,7 @@ const children = [
       { element: <AdminDashboard />, path: "/" },
       { element: <InternDashboard />, path: "/dashboard" },
       { element: <Login />, path: "/login" },
+      { element: <Register />, path: "/register" },
       { element: <Charts />, path: "/chart" },
       { element: <UserProfile />, path: "/userProfile" },
       { element: <AddIntern />, path: "/addintern" },

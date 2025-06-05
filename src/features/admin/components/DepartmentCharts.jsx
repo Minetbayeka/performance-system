@@ -3,11 +3,10 @@ import {
 
   Tooltip,
   Legend,
-  CartesianGrid,
-  BarChart,
   Bar,
   XAxis,
   YAxis,
+  BarChart,
 
  
 } from 'recharts';

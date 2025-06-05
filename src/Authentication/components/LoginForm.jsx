@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import image from '../../assets/images/person.jpg'
 import image1 from '../../assets/images/logo.png'
 import { Eye } from 'lucide-react'
+import axios from 'axios'
 
 const LoginForm = () => {
+
+  const [post, setPost] = useState([])
+
+   useEffect(() =>{
+    axios.get("http://192.168.1.241:8000/api/")
+    .then((response)=>{
+      setPost(response)
+      console.log(response)
+    })
+    .catch((error)=>{
+      console.error("error fetching data", error)
+    })
+   }, [])
+
   return (
     <section className='flex justify-center'>
     <div className="flex gap-9  mt-40 bg-[#E4E7EC] rounded-lg w-[60%]">
@@ -14,7 +29,7 @@ const LoginForm = () => {
         <img src={image1}  alt='logo' className='w-32 '/>
         <h1 className='text-4xl pb-5'>Login</h1>
         <form className='space-y-2'>
-            <label for="email" className='block' >Email</label>
+            <label className='block' >Email</label>
             <input type='text' placeholder='example@gmail.com' className='rounded-md p-2 w-72 outline-none' />
             <label for="password" className='block' >Password</label>
 
