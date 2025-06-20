@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
-import Sidebar from "../admin/components/Sidebar";
 import { User } from "lucide-react";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../provider/AppContext";
+import Sidebar from "../components/Sidebar";
 
 
 const AddIntern = () => {

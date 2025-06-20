@@ -13,6 +13,7 @@ import Rolepermission from "../features/userAdmin/components/Rolepermission";
 import ActivityHistory from "../features/userAdmin/components/ActivityHistory";
 
 import Register from "../Authentication/Register";
+import Dataverification from "../features/dataverification/Dataverification";
 
 
 
@@ -32,6 +33,7 @@ const children = [
       { element: <CreateUsers />, path: "/createuser" },
       { element: <Rolepermission />, path: "/role" },
       { element: <ActivityHistory />, path: "/activityhistory" },
+      { element: <Dataverification />, path: "/dataverification" },
      
      
    

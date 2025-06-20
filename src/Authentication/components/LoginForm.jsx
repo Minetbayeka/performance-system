@@ -2,24 +2,33 @@ import React, { useEffect, useState } from 'react'
 import image from '../../assets/images/person.jpg'
 import image1 from '../../assets/images/logo.png'
 import { Eye } from 'lucide-react'
-import axios from 'axios'
+import { useGetAllProductQuery } from '../../app/services/admin/admin.service'
 
 const LoginForm = () => {
 
-  const [post, setPost] = useState([])
+  // const [post, setPost] = useState([])
 
-   useEffect(() =>{
-    axios.get("http://192.168.1.241:8000/api/")
-    .then((response)=>{
-      setPost(response)
-      console.log(response)
-    })
-    .catch((error)=>{
-      console.error("error fetching data", error)
-    })
-   }, [])
+  //  useEffect(() =>{
+  //   axios.get("http://192.168.1.241:8000/api/")
+  //   .then((response)=>{
+  //     setPost(response)
+  //     console.log(response)
+  //   })
+  //   .catch((error)=>{
+  //     console.error("error fetching data", error)
+  //   })
+  //  }, [])
+  const {data, isLoading, isError,} = useGetAllProductQuery("products")
+  if(isError){
+    return <h1>oooh noooooo we got an error</h1>
+  }
+if(isLoading){
+  return <h1>loading............</h1>
+}
+
 
   return (
+    
     <section className='flex justify-center'>
     <div className="flex gap-9  mt-40 bg-[#E4E7EC] rounded-lg w-[60%]">
     <div>
@@ -42,6 +51,15 @@ const LoginForm = () => {
         <button className='bg-primary items-center p-1 rounded-lg px-32  text-white mt-5'>Login</button>
     </div>
     </div>
+    {/* all product sample */}
+    <div>
+      {data?.products.map((p)=>(
+        <h1 key={p.id}>{p.title}</h1>
+      ))}
+    <h1 className='mt-64 mx-24'>ADD PRODUCT</h1>
+    </div>
+
+
     </section>
   )
 }

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import {permissionsList} from '../../data'
-import Sidebar from '../../admin/components/Sidebar';
 import { Bell } from 'lucide-react';
 import image1 from '../../../assets/images/girl.jpeg'
+import Sidebar from '../../components/Sidebar';
 
 
 const Rolepermission = () => {

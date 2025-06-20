@@ -1,10 +1,11 @@
 import React from 'react'
-import Sidebar from '../../features/admin/components/Sidebar'
+
 import { Button } from '../../features/admin/components/DashboardButton'
 import { User, Users, Pi} from 'lucide-react'
 import image from '../../assets/images/girl.jpeg'
 import PerformanceGauge from './PerformanceGuage'
 import { Link } from 'react-router-dom'
+import Sidebar from '../../features/components/Sidebar'
 
 const UserProfile = () => {
   return (

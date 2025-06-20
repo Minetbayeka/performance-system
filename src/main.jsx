@@ -6,7 +6,9 @@ import ReactDOM from "react-dom/client";
 // import { router } from "./router/AppRouter";
 import { AppProvider } from './provider/AppProvider';
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
+  
   <React.StrictMode>
     <AppProvider/>
 
@@ -14,4 +16,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
     } /> */}
   </React.StrictMode>,
+  
 )

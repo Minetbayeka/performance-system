@@ -6,6 +6,8 @@ import { RouterProvider} from "react-router-dom";
 import { router } from "../router/AppRouter";
 import { cartReducer } from "./CartReducer";
 import { interns as initialInterns } from "../../src/features/data";
+import {Provider} from 'react-redux'
+import { store } from "../app/Store";
 
 
 
@@ -53,9 +55,11 @@ const ContextProvider = ({children}) => {
 
 export const AppProvider = () => {
   return(
+    <Provider store={store}>
     <ContextProvider>
       <RouterProvider router={router}></RouterProvider>
     </ContextProvider>
+    </Provider>
   
   );
 };

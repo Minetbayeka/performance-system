@@ -1,9 +1,10 @@
 import React, { useContext } from 'react'
 import  {  useState } from "react";
-import Sidebar from "../admin/components/Sidebar";
+
 import { User } from "lucide-react";
 import { Link } from "react-router-dom";
 import {users as initialUser} from "../data"
+import Sidebar from '../components/Sidebar';
 
 
 

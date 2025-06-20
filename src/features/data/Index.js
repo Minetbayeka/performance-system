@@ -160,3 +160,89 @@ export const permissionsList = [
     description:"Provides authority for removing content from the system entirely",
   },
 ];
+
+
+// Mock data (replace with your actual users data)
+export const internsData = [
+  {
+    id: 1,
+    name: 'Olivia Rhye',
+    imgUrl: image1, // Placeholder image
+    priority: 'High priority',
+    submittedBy: 'Johanna Skiles',
+    weekNumber: 'Week 12',
+    submissionDateTime: '12-05-2025, 6:00PM',
+    status: 'Pending',
+  },
+  {
+    id: 2,
+    name: 'Phoenix Baker',
+    imgUrl: image1, // Placeholder image
+    priority: 'Low priority',
+    submittedBy: 'Danielle McClure',
+    weekNumber: 'Week 10',
+    submissionDateTime: '12-05-2025, 6:00PM',
+    status: 'In Review',
+  },
+  {
+    id: 3,
+    name: 'Lana Steiner',
+    imgUrl: image1, // Placeholder image
+    priority: 'Medium priority',
+    submittedBy: 'Brandon O\'Hara',
+    weekNumber: 'Week 8',
+    submissionDateTime: '12-05-2025, 6:00PM',
+    status: 'Verified',
+  },
+  {
+    id: 4,
+    name: 'Demi Wilkinson',
+    imgUrl: image3, // Placeholder image
+    priority: 'Medium priority',
+    submittedBy: 'Stacy Schultz',
+    weekNumber: 'Week 15',
+    submissionDateTime: '12-05-2025, 6:00PM',
+    status: 'Rejected',
+  },
+  {
+    id: 5,
+    name: 'Candice Wu',
+    imgUrl: image4, // Placeholder image
+    priority: 'High priority',
+    submittedBy: 'Ronnie Oison',
+    weekNumber: 'Week 19',
+    submissionDateTime: '12-05-2025, 6:00PM',
+    status: 'Verified',
+  },
+  {
+    id: 6,
+    name: 'Natali Craig',
+    imgUrl: image5, // Placeholder image
+    priority: 'Low priority',
+    submittedBy: 'Christie Bartoletti',
+    weekNumber: 'Week 14',
+    submissionDateTime: '12-05-2025, 6:00PM',
+    status: 'In Review',
+  },
+  {
+    id: 7,
+    name: 'Drew Cano',
+    imgUrl: image6, // Placeholder image
+    priority: 'Low priority',
+    submittedBy: 'Brian Thiel',
+    weekNumber: 'Week 17',
+    submissionDateTime: '12-05-2025, 6:00PM',
+    status: 'Rejected',
+  },
+  {
+    id: 8,
+    name: 'Jasper Lee',
+    imgUrl: image7, // Placeholder image
+    priority: 'High priority',
+    submittedBy: 'Avery Mason',
+    weekNumber: 'Week 16',
+    submissionDateTime: '12-05-2025, 6:00PM',
+    status: 'Pending',
+  },
+];
+

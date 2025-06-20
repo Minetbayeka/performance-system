@@ -1,10 +1,11 @@
 
 import React from 'react'
-import image from '../../../assets/images/logo.png'
+// import image from '../../../assets/images/logo.png'
+import image from '../../assets/images/logo.png'
 import { Link } from 'react-router-dom'
 import { Power } from 'lucide-react';
 import { Bell } from 'lucide-react';
-import image1 from '../../../assets/images/girl.jpeg';
+
 
 const Sidebar = () => {
   return (
@@ -16,7 +17,7 @@ const Sidebar = () => {
           <li><Link to="/dashboard">Intern Management</Link></li>
           <li><Link to="/usermanagement">User Management</Link></li>
           <li><Link to="#">Performance Analysis</Link></li>
-          <li><Link to="#">Data Verification</Link></li>
+          <li><Link to="/dataverification">Data Verification</Link></li>
           <li className='pb-40'><Link to="#">Reports and Analytics</Link></li>
           <li><Link to="#">Setting</Link></li>
           <li><Link to="#">Help & Support</Link></li>

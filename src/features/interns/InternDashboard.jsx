@@ -1,7 +1,7 @@
 import React from 'react'
 import Dashboard from './components/dashboard'
-import Sidebar from '../admin/components/Sidebar'
 import HeaderIntern from './components/HeaderIntern'
+import Sidebar from '../components/Sidebar'
 
 
 const InternDashboard = () => {

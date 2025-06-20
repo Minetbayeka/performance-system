@@ -1,7 +1,8 @@
 import React from 'react'
-import Sidebar from '../admin/components/Sidebar'
 import UserDashboard from './components/UserDashboard'
 import UserHeader from './components/UserHeader'
+import Sidebar from '../components/Sidebar'
+
 
 const UserManagement = () => {
   return (

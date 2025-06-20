@@ -1,6 +1,7 @@
 import { User } from 'lucide-react';
 import React from 'react';
-import Sidebar from '../../admin/components/Sidebar';
+import Sidebar from '../../components/Sidebar';
+
 
 const ActivityHistory = () => {
   const activities = [
