@@ -14,6 +14,8 @@ import ActivityHistory from "../features/userAdmin/components/ActivityHistory";
 
 import Register from "../Authentication/Register";
 import Dataverification from "../features/dataverification/Dataverification";
+import RoleManagement from "../features/roleManagement/RoleManagement";
+import AdminRoutes from "@features/router/router";
 
 
 
@@ -34,11 +36,14 @@ const children = [
       { element: <Rolepermission />, path: "/role" },
       { element: <ActivityHistory />, path: "/activityhistory" },
       { element: <Dataverification />, path: "/dataverification" },
+      { element: <RoleManagement />, path: "/rolemanagement" },
      
      
    
+  ...AdminRoutes,
      
 ];
+
 
 
 export const router = createBrowserRouter([

@@ -3,11 +3,13 @@ import { Button } from '../../admin/components/DashboardButton';
 import { Link } from 'react-router-dom';
 import { users } from "../../data";
 import Pagination from '../../../components/atoms/Pagination';
-import { useState } from 'react';
+import { useState , useRef, useEffect} from 'react';
 
 
 const UserDashboard= () => {
     const [search, setSearch]= useState("")
+      const [isOpen, setIsOpen] = useState(false);
+      const menuRefs = useRef({});
 
     const filterUsers = users.filter((user) =>{
         const searchLower = search.toLowerCase();
@@ -19,6 +21,15 @@ const UserDashboard= () => {
 
         );
     }) 
+
+    useEffect(() => {
+        const handleClickOutside = (event) =>{
+          const isClickInsideAny = Object.values(menuRefs.current).some(ref => ref?.contains(event.target));
+          if (!isClickInsideAny)  setIsOpen(null);
+        }
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+      }, []);
 
 
   return (
@@ -50,20 +61,18 @@ const UserDashboard= () => {
 <div className='flex  space-x-10 gap-96'>
      <div className="flex gap-2 pt-4 pb-3">
         <h1>Interns</h1>
-        <button className="bg-[#E4E7EC] rounded-full px-2 text-primary">{users.length}</button>
+        <button className="bg-purple-100 text-purple-800 text-sm font-medium px-2.5 py-0.5 rounded-full">{users.length}</button>
       </div>
         <div className='flex space-x-10 mb-3'>
-     <div className="border rounded px-2 py-1 flex items-center w-80 bg-gray-50">
-          <Search />
-          <input
-            type="text"
-            placeholder="Search"
-            className="bg-gray-50 outline-none w-full text-[#E4E7EC] placeholder-[#E4E7EC] mx-5"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}  
-          
-          />
-          
+        <div className="relative w-full max-w-xs ml-12">
+          <Search className="absolute left-3 top-2.5 w-4 h-4 text-gray-400" />
+           <input
+               type="text"
+                placeholder="Search"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-300 text-sm"
+                value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              />
         </div>
         <Button 
         icon={<ListFilter size={16} />}
@@ -82,6 +91,7 @@ const UserDashboard= () => {
               <th className="px-6 py-3">Department</th>
               <th className="px-6 py-3">Email</th>
               <th className="px-6 py-3">last seen online</th>
+                <th className="px-6 py-3"></th>
             </tr>
           </thead>
           <tbody>
@@ -100,11 +110,23 @@ const UserDashboard= () => {
                 </td>
                 <td className="px-6 py-4">{user.department}</td>
                 <td className="px-6 py-4">{user.email}</td>
-                <td className="px-6 py-4 text-center">{user.last}
-                    <span className='ml-10'>...</span>
-                </td>
-                
-                <td className="px-6 py-4 flex space-x-3 items-center">
+                <td className="px-6 py-4 text-center">{user.last}</td>
+                <td className="px-6 py-4 flex space-x-3 items-center"
+                onClick={() => setIsOpen(!isOpen === user.id ? null : user.id)}>
+                  <button className="text-gray-500 hover:text-gray-900 ml-3">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                    </svg>
+                    </button>
+                      {isOpen === user.id && (
+                       <div className="absolute right-0 mt-2 w-48 bg-white border border-blue-400 rounded-md shadow-lg z-10">
+                       <ul className="py-1 text-sm text-gray-700">
+                       <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Edit User</li>
+                       <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer border-t border-gray-200">Delete user account</li>
+                       <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer border-t border-gray-200">View action logs</li>
+                      </ul>
+                     </div>
+                      )}
                 </td>
               </tr>
             ))}

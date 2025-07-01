@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import SelectInput from './SelectInput'; // Assuming this path is correct
+import SelectInput from './SelectInput';
+
 
 const Sort = ({ isOpen, onClose, onApplySort, internNames, priorities, statuses }) => {
   const [sortByInternName, setSortByInternName] = useState('');
@@ -91,3 +92,17 @@ const Sort = ({ isOpen, onClose, onApplySort, internNames, priorities, statuses 
 };
 
 export default Sort;
+
+
+
+// import React from 'react'
+
+// const Sort = () => {
+//   return (
+//     <div>
+      
+//     </div>
+//   )
+// }
+
+// export default Sort

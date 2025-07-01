@@ -4,17 +4,14 @@ import image2 from '../../src/assets/images/person.jpg'
 
 const Register = () => {
   return (
-    <main className='max-w-6xl mx-auto mt-20'>
-    <div className='grid grid-cols-1 lg:grid-cols-2'>
-      <div>
-    <img src={image2}  alt='' className='w-96 h-96' />
-    </div>
+    <section className='  min-h-screen grid place-items-center bg-gray-50 pb-10'>
     <div>
     <RegistrationForm/>
     </div>
-    </div>
-    </main>
+    </section>
   )
 }
 
 export default Register
+
+

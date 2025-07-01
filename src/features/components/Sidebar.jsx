@@ -1,7 +1,8 @@
 
 import React from 'react'
 // import image from '../../../assets/images/logo.png'
-import image from '../../assets/images/logo.png'
+// import image from '../../assets/images/logo.png'
+import image from '@assets/images/logo.png'
 import { Link } from 'react-router-dom'
 import { Power } from 'lucide-react';
 import { Bell } from 'lucide-react';

@@ -2,7 +2,7 @@ import { Pen, Search, Trash2, Users } from 'lucide-react';
 import { Button } from '../../admin/components/DashboardButton';
 import Pagination from '../../../components/atoms/Pagination';
 import { Link } from 'react-router-dom';
-import { interns } from "../../data";
+import { interns as filteredInterns } from "../../data";
 import { useContext, useState } from 'react';
 import { AppContext } from '../../../provider/AppContext';
 
@@ -29,21 +29,37 @@ const filteredInterns = interns.filter((intern) => {
     // navigate(`/editintern/${intern.id}`);
   };
 
+  const getPerformaceBadgeClasses = (performance)=>{
+    switch (performance) {
+      case 'Excellent':
+      return 'bg-green-100 text-green-800'
+      case 'Good':
+        return 'bg-blue-100 text-blue-800'
+       case 'Average':
+        return 'bg-green-100 text-green-800'
+      case 'Bad':
+        return 'bg-red-100 text-red-800'
+      case 'Poor':
+        return 'bg-red-100 text-red-800'
+        default:
+      return 'bg-gray-100 text-gray-800';
+  
+    }
+  }
+
   return (
     <section className="pt-4 ml-56 mt-16">
-      <div className="flex gap-80">
-        <div className="border rounded px-2 py-1 flex items-center w-80 bg-gray-50">
-          <Search />
+      <div className="flex items-center justify-between mb-6">
+      <div className="relative w-full max-w-xs">
+         <Search className="absolute left-3 top-2.5 w-4 h-4 text-gray-400" />
           <input
-            type="text"
-            placeholder="Search"
-            className="bg-gray-50 outline-none w-full text-[#E4E7EC] placeholder-[#E4E7EC] mx-5"
-             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          
-          />
-          
-        </div>
+             type="text"
+              placeholder="Search"
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-300 text-sm"
+               value={searchTerm}
+               onChange={(e) => setSearchTerm(e.target.value)}
+              />
+               </div>
 
         <div>
           <Link to="/addintern">
@@ -58,7 +74,7 @@ const filteredInterns = interns.filter((intern) => {
 
       <div className="flex gap-2 pt-4 pb-3">
         <h1>Interns</h1>
-        <button className="bg-[#E4E7EC] rounded-full px-2 text-primary">{interns.length}</button>
+        <button className="bg-purple-100 text-purple-800 text-sm font-medium px-2.5 py-0.5 rounded-full">{interns.length}</button>
       </div>
 
       <div className="overflow-x-auto">
@@ -83,14 +99,14 @@ const filteredInterns = interns.filter((intern) => {
                 </td>
 
                 <td className="px-6 py-4">
-                  <span className="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">
+                  <span className={` text-xs font-semibold px-2.5 py-0.5 rounded ${ getPerformaceBadgeClasses(intern.performance)}`}>
                     {intern.performance}
                   </span>
                 </td>
                 <td className="px-6 py-4">{intern.departments}</td>
                 <td className="px-6 py-4">{intern.supervisor}</td>
                 <td className="px-6 py-4">{intern.internshipdur}</td>
-                <td className="px-6 py-4 flex space-x-3 items-center">
+                <td className="px-6 py-4 flex">
                   <button
                     className="text-gray-500 hover:text-red-600"
                     onClick={() => removeIntern(intern.id)}
@@ -103,14 +119,13 @@ const filteredInterns = interns.filter((intern) => {
                   >
                     <Pen />
                   </button>
-                  <a
-                    href={intern.profile}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link to="/userProfile">
+                  <button
                     className="text-blue-600 hover:underline"
                   >
                     View Profile
-                  </a>
+                  </button>
+                  </Link>
                 </td>
               </tr>
             ))}

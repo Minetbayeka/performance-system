@@ -4,9 +4,11 @@ import LoginForm from './components/LoginForm'
 
 const Login = () => {
   return (
-    <div className='max-w-6xl mx-auto'>
+    <section className=' min-h-screen grid place-items-center bg-gray-50 pb-10'>
+    <div>
       <LoginForm/>
     </div>
+    </section>
   )
 }
 

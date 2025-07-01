@@ -1,17 +1,17 @@
 import image1 from "../../assets/images/girl.jpeg";
 import image2 from "../../assets/images/baet.jpeg";
-import image3 from "../../assets/images/girl.jpeg";
+// import image3 from "../../assets/images/girl.jpeg";
 import image4 from "../../assets/images/baet.jpeg";
-import image5 from "../../assets/images/girl.jpeg";
+// import image5 from "../../assets/images/girl.jpeg";
 import image6 from "../../assets/images/baet.jpeg";
-import image7 from "../../assets/images/girl.jpeg";
+// import image7 from "../../assets/images/girl.jpeg";
 
 export const interns = [
   {
     id: 1,
     name: "Olivia Rhye",
     imgUrl: image1,
-    performance: "Ecellent",
+    performance: "Excellent",
     departments: "Product Designer",
     supervisor: "Johanna Skilles",
     internshipdur: "3 months",
@@ -31,7 +31,7 @@ export const interns = [
   {
     id: 3,
     name: "Lana Steiner",
-    imgUrl: image3,
+    imgUrl: image1,
     performance: "Good",
     departments: "Frontend Developer",
     supervisor: "Brandon Hara",
@@ -53,8 +53,8 @@ export const interns = [
   {
     id: 5,
     name: "Candice Wu",
-    imgUrl: image5,
-    performance: "poor",
+    imgUrl: image1,
+    performance: "Poor",
     departments: "Fullstack Developer",
     supervisor: "Ronnie Oison",
     internshipdur: "3 months",
@@ -74,7 +74,7 @@ export const interns = [
   {
     id: 7,
     name: "Drew Cano",
-    imgUrl: image7,
+    imgUrl: image1,
     performance: "Poor",
     departments: "Ux Copywriter",
     supervisor: "Brain Thiel",
@@ -187,7 +187,7 @@ export const internsData = [
   {
     id: 3,
     name: 'Lana Steiner',
-    imgUrl: image1, // Placeholder image
+    imgUrl: image2, // Placeholder image
     priority: 'Medium priority',
     submittedBy: 'Brandon O\'Hara',
     weekNumber: 'Week 8',
@@ -197,7 +197,7 @@ export const internsData = [
   {
     id: 4,
     name: 'Demi Wilkinson',
-    imgUrl: image3, // Placeholder image
+    imgUrl: image4, // Placeholder image
     priority: 'Medium priority',
     submittedBy: 'Stacy Schultz',
     weekNumber: 'Week 15',
@@ -207,7 +207,7 @@ export const internsData = [
   {
     id: 5,
     name: 'Candice Wu',
-    imgUrl: image4, // Placeholder image
+    imgUrl: image1, // Placeholder image
     priority: 'High priority',
     submittedBy: 'Ronnie Oison',
     weekNumber: 'Week 19',
@@ -217,7 +217,7 @@ export const internsData = [
   {
     id: 6,
     name: 'Natali Craig',
-    imgUrl: image5, // Placeholder image
+    imgUrl: image2, // Placeholder image
     priority: 'Low priority',
     submittedBy: 'Christie Bartoletti',
     weekNumber: 'Week 14',
@@ -227,7 +227,7 @@ export const internsData = [
   {
     id: 7,
     name: 'Drew Cano',
-    imgUrl: image6, // Placeholder image
+    imgUrl: image1, // Placeholder image
     priority: 'Low priority',
     submittedBy: 'Brian Thiel',
     weekNumber: 'Week 17',
@@ -237,7 +237,7 @@ export const internsData = [
   {
     id: 8,
     name: 'Jasper Lee',
-    imgUrl: image7, // Placeholder image
+    imgUrl: image2, // Placeholder image
     priority: 'High priority',
     submittedBy: 'Avery Mason',
     weekNumber: 'Week 16',

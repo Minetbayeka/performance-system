@@ -12,6 +12,12 @@ export default {
         secondary: "#D92D20",
         tertiary: "#D2D3CD",
       },
+       
+        fontFamily:{
+          poppins:['poppins', 'sans-serif']
+
+        }
+       
     },
   },
   plugins: [],

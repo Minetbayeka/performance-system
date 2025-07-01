@@ -6,7 +6,7 @@ import Sidebar from '../components/Sidebar'
 
 const InternDashboard = () => {
   return (
-    <section className='max-w-6xl mx-auto '>
+    <section className='max-w-7xl mx-auto '>
         <div className='flex gap-8 pt-11'>
      <Sidebar/>
      
