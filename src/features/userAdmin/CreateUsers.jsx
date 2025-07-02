@@ -3,6 +3,7 @@ import { User } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 import { useCreateUsersMutation } from '@app/services/admin/admin.service';
+import toast from 'react-hot-toast';
 
 const CreateUsers = () => {
   const [firstName, setFirstName] = useState('');
@@ -52,6 +53,7 @@ const CreateUsers = () => {
       setPassword('');
       setAccess('');
       setImage(null);
+      toast.success('create user successful!');
     } catch (err) {
       console.error('Error creating user:', err);
     }
