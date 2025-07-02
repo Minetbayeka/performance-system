@@ -57,16 +57,14 @@ export const AppProvider = () => {
       <RouterProvider router={router}></RouterProvider>
        <ToastContainer
             position="top-right"
-            // autoClose={3000}
-            // hideProgressBar={false}
-            // newestOnTop={false}
-            // closeOnClick
-            // pauseOnFocusLoss
-            // draggable
-            // pauseOnHover
-            // theme="light"
-            
-            
+            autoClose={3000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
             />
     </ContextProvider>
    

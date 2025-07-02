@@ -33,13 +33,16 @@ const authSlice = createSlice({
   reducers: {
     saveUser: (state, action) => {
       try {
-        const { token, user, intern, supervisor } = action.payload;
+        const { token, user, intern, supervisor, admin } = action.payload;
+        
 
         const completeUser = {  
         ...user,
         intern,
         supervisor,
-        admin, };
+        admin, 
+         
+     };
 
         state.token = token;
         state.user = completeUser;
